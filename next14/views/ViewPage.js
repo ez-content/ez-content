@@ -14,7 +14,7 @@ export default function SlugPage({ content, globals, isPreview }) {
     if (!itm.comp_global) {
       const tmpPath = itm.comp_path ? `${itm.comp_path}` : `/${itm.comp_type}`;
       return dynamic(() =>
-        import(`../../components${tmpPath}`, { ssr: !isPreview })
+        import(`../../../../components${tmpPath}`, { ssr: !isPreview })
       );
     } else {
       const globalContentList = globals.filter((itm2) => {
@@ -28,7 +28,7 @@ export default function SlugPage({ content, globals, isPreview }) {
           : `/${itm2.comp_type}`;
 
         return dynamic(() =>
-          import(`../../components${tmpPath}`, { ssr: !isPreview })
+          import(`../../../../components${tmpPath}`, { ssr: !isPreview })
         );
       });
     }

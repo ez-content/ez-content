@@ -6,7 +6,11 @@ a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
 ## 2024-05-05 
 
-> via @jafstar
+> v1.0.3
+
+- Fix file path and variable name
+
+> v1.0.2 via @jafstar
 
 - Added this changelog file!
 - Added ability to adjust api url
@@ -15,7 +19,7 @@ a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
 ## 2024-05-04 
 
-> via @jafstar
+> v1.0.1 via @jafstar
 
 - Created Repo!
 - Added to [NPM](https://www.npmjs.com/package/ez-content)

@@ -18,7 +18,7 @@ export async function getContent(slug, opts) {
   };
 
   const { signal } = new AbortController();
-  const API_BASE = opts.api_url;
+  const API_BASE = options.api_url;
   
   let getSlug = "index";
   if (slug !== "/" && slug !== undefined) {

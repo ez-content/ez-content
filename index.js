@@ -1,4 +1,4 @@
-import ViewPage from "./ViewPage";
-import { getContent } from "./getContent";
+import ViewPage from "./next14/views/ViewPage";
+import { getContent } from "./next14/utils/getContent";
 
 export { ViewPage, getContent };

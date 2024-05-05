@@ -2,6 +2,7 @@ const defOpts = {
   cache: "no-store",
   revalidate: 3600,
   referrer: process.env.EZ_TOKEN ?? "",
+  api_url: process.env.EZ_API ?? `https://api.ezcontent.io/functions/v1`,
 };
 
 /**
@@ -17,7 +18,7 @@ export async function getContent(slug, opts) {
   };
 
   const { signal } = new AbortController();
-  const API_BASE = `https://api.ezcontent.io/functions/v1`;
+  const API_BASE = opts.api_url;
   
   let getSlug = "index";
   if (slug !== "/" && slug !== undefined) {

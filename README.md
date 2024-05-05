@@ -1,16 +1,45 @@
-### Hi there 👋
+# EZ Content
 
-<!--
-**ez-content/ez-content** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Introduction
 
-Here are some ideas to get you started:
+This package is to retrieve data from [ezcontent.io](ezcontent.io) and display React components in a Next.js v14 application.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Install
+
+> npm install ez-content
+
+> yarn add ez-content
+
+## .env File
+
+``` EZ_TOKEN="your_token_goes_here" ```
+
+
+## Example
+> app/page.js
+```
+"use server";
+import { ViewPage, getContent } from "ez-content";
+import { notFound } from "next/navigation";
+
+export async function generateMetadata({ params }) {
+  const { title } = await getContent(params.slug);
+
+  return {
+    title: title,
+  };
+}
+export default async function Page({ params }) {
+  const { content, globals } = await getContent(params.slug);
+
+  if (content) return <ViewPage content={content} globals={globals} />;
+  else notFound();
+}
+```
+
+## Notes
+
+- component directory must be in the root
+
+
+More coming soon

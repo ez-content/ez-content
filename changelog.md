@@ -6,6 +6,11 @@ a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
 ## 2024-05-05 
 
+> v1.0.4
+
+- Add composeContent for granular control in a view-page.js file
+- Add ViewContent also for granular control in a case where a Header or Footer would be added
+
 > v1.0.3
 
 - Fix file path and variable name

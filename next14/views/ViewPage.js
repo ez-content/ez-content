@@ -1,7 +1,7 @@
 "use client";
 
 import { composeContent } from "../utils/composeContent";
-import { ViewContent } from "./ViewContent";
+import ViewContent from "./ViewContent";
 
 export default function SlugPage({ content, globals, isPreview }) {
 

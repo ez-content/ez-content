@@ -6,6 +6,10 @@ a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
 ## 2024-05-05 
 
+> v1.0.5
+
+- Adjust imports in attempt to fix ViewContent issue with Unexpected token
+
 > v1.0.4
 
 - Add composeContent for granular control in a view-page.js file

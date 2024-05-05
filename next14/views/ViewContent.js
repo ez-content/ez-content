@@ -1,13 +1,12 @@
-import React from 'react'
-
-export const ViewContent = ({
+const ViewContent = ({
     compListAll,
     contentListAll,
     globals
 }) => {
     return (
         <>
-                {compListAll.map((Itm, idx) => {
+        {compListAll && compListAll.length > 0 && compListAll.map((Itm, idx) => {
+          
           if (contentListAll[idx] && contentListAll[idx].comp_content) {
             return (
               <div
@@ -23,7 +22,10 @@ export const ViewContent = ({
           } else {
             return <></>;
           }
+
         })}
         </>
     )
 }
+
+export {ViewContent as default}

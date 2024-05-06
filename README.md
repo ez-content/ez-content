@@ -15,7 +15,7 @@ This package is to retrieve data from [ezcontent.io](ezcontent.io) and display R
 ``` EZ_TOKEN="your_token_goes_here" ```
 
 
-## Example
+## Example 1 - Standard Use
 > app/page.js
 ```
 "use server";
@@ -35,6 +35,72 @@ export default async function Page({ params }) {
   if (content) return <ViewPage content={content} globals={globals} />;
   else notFound();
 }
+```
+
+## Example 2 - Global Headers/Footers
+
+Use a custom view-page.js file in the app directory. For convenience add 
+a custom ViewContent.js in your components directory for easy rendering.
+
+### Step 1
+
+> app/view-page.js
+
+```
+"use client";
+
+import { composeContent } from "ez-content";
+import ViewContent from "@/components/ViewContent";
+import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
+
+export default function SlugPage({ content, globals, isPreview }) {
+  const { compListAll, contentListAll } = composeContent(
+    content,
+    globals,
+    isPreview
+  );
+
+  return (
+    <div>
+      {!isPreview && <Header globals={globals} />}
+      <main>
+        <ViewContent
+          components={compListAll}
+          content={contentListAll}
+          globals={globals}
+        />
+      </main>
+      {!isPreview && <Footer globals={globals} />}
+    </div>
+  );
+}
+```
+
+### Step 2
+
+> @/components/ViewContent.js
+
+```
+"use client";
+
+const ViewContent = ({ components, content, globals }) => {
+  const list = components.filter((_, idx) => content[idx].comp_content);
+  return (
+    <div>
+      {list.map((Itm, i) => (
+        <Itm
+          key={`itm-${i}`}
+          id={`${content[i].comp_type}-${i}`}
+          content={content[i].comp_content}
+          globals={globals}
+        />
+      ))}
+    </div>
+  );
+};
+
+export { ViewContent as default };
 ```
 
 ## Notes

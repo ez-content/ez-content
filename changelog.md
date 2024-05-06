@@ -6,6 +6,10 @@ a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
 ## 2024-05-05 
 
+> v1.0.6,7,8
+
+- Wow it seems ViewContent does not play well importing dynamic components from the node_modules folder. Perhaps a system permission issue, need more research.
+
 > v1.0.5
 
 - Adjust imports in attempt to fix ViewContent issue with Unexpected token

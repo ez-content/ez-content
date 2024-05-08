@@ -81,6 +81,7 @@ export async function getContent(slug, opts) {
       globals: data2,
     };
   } catch (err) {
-    res.status(500).send({ error: "failed to fetch data" });
+    console.log("err: ", err)
+    return null
   }
 }

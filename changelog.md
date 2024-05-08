@@ -3,10 +3,15 @@
 This is the changelog for [ez-content](https://github.com/ez-content/ez-content), 
 a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
+## 2024-05-08
+
+> v1.0.9 via @jafstar
+
+- Fix try/catch error response with plain text.
 
 ## 2024-05-05 
 
-> v1.0.6,7,8
+> v1.0.6,7,8 via @jafstar
 
 - Wow it seems ViewContent does not play well importing dynamic components from the node_modules folder. Perhaps a system permission issue, need more research.
 
@@ -23,7 +28,7 @@ a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
 - Fix file path and variable name
 
-> v1.0.2 via @jafstar
+> v1.0.2 
 
 - Added this changelog file!
 - Added ability to adjust api url

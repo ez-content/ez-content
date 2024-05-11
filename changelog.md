@@ -3,6 +3,13 @@
 This is the changelog for [ez-content](https://github.com/ez-content/ez-content), 
 a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
+## 2024-05-011
+
+> v1.0.10 via @jafstar
+
+- Add constants/defOpts folder and file
+- Destructure getContent into getPages and getGlobals
+
 ## 2024-05-08
 
 > v1.0.9 via @jafstar

@@ -2,26 +2,25 @@
 
 import React from 'react'
 import { composeContent } from "../utils/composeContent";
-
 export default function SlugPage({ content, globals, isPreview }) {
 
   const  {compListAll, contentListAll } = composeContent(content, globals, isPreview)
   const list = compListAll.filter((_, idx) => contentListAll[idx].comp_content);
 
   return (
-    <div>
-      <main>
       <div>
       {list.map((Itm, i) => (
-        <Itm
-          key={`itm-${i}`}
-          id={`${contentListAll[i].comp_type}-${i}`}
-          content={contentListAll[i].comp_content}
-          globals={globals}
-        />
+         <div
+            key={`itm-${i}`}
+            id={`${contentListAll[i].comp_type}-${i}`}
+            className="ez-content-component-container"
+          >
+          <Itm
+            content={contentListAll[i].comp_content}
+            globals={globals}
+          />
+        </div>
       ))}
-    </div>
-      </main>
     </div>
   );
 }

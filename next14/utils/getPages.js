@@ -1,3 +1,4 @@
+import { draftMode } from "next/headers";
 import { defOpts } from "../../constants/defOpts";
 
   /**

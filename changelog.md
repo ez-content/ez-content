@@ -3,12 +3,24 @@
 This is the changelog for [ez-content](https://github.com/ez-content/ez-content), 
 a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
-## 2024-05-011
+## 2024-07-05
 
-> v1.0.10 via @jafstar
+> v1.0.17 via @jafstar
 
+- Add EZ_CACHE env var for revalidate options "force-cache" | "no-store"
+- Add beta test of EZTitle component
+
+## 2024-05-11
+
+> v1.0.10, 11, 12, 13, 14, 15, 16 via @jafstar
+
+- Update API URL
+- Add ViewContent, again
+- Add back draftMode()
 - Add constants/defOpts folder and file
 - Destructure getContent into getPages and getGlobals
+- Remove import error
+- Update ReadMe with ViewContent from package
 
 ## 2024-05-08
 

@@ -37,10 +37,9 @@ export default async function Page({ params }) {
 }
 ```
 
-## Example 2 - Global Headers/Footers
+## Example 2 - Static Headers/Footers
 
-Use a custom view-page.js file in the app directory. For convenience add 
-a custom ViewContent.js in your components directory for easy rendering.
+Use composeContent and ViewContent to add Static Headers that are disabled in the EZ Content editor.
 
 ### Step 1
 
@@ -49,8 +48,8 @@ a custom ViewContent.js in your components directory for easy rendering.
 ```
 "use client";
 
-import { composeContent } from "ez-content";
-import ViewContent from "@/components/ViewContent";
+import { composeContent, ViewContent } from "ez-content";
+
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 

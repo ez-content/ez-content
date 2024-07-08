@@ -1,6 +1,6 @@
 import { draftMode } from "next/headers";
 import { defOpts } from "../../constants/defOpts";
-
+import { checkRevalidation } from "./checkRevalidation";
 /**
  * @name getContent
  * @param {string} slug
@@ -15,6 +15,10 @@ const options = {
 
 const { signal } = new AbortController();
 const API_BASE = options.api_url;
+
+// Check Revalidate URL
+checkRevalidation(slug, options.hash)
+
 
 let getSlug = "index";
 if (slug !== "/" && slug !== undefined) {
@@ -55,7 +59,7 @@ try {
     signal: signal,
     cache: isPreview ? "no-store" : options.cache,
     referrer: options.referrer,
-    next: { tags: [`pages/${getSlug}`]}
+    // next: { tags: [`pages/${getSlug}`]}
   });
 
   const data = await res.json();

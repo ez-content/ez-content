@@ -5,10 +5,13 @@ a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
 ## 2024-07-07
 
-> v1.0.31-32 via @jafstar
+> v1.0.31-33 via @jafstar
 
 - Fix EZParagraph bug
-- Add revalidationTags to fetch query
+- Add checkRevalidation with revalidatePath
+- Add EZ_HASH env var for custom revalidate path
+- Now allows getContent to accept options for "hash", overrides EZ_HASH
+
 
 ## 2024-07-05
 

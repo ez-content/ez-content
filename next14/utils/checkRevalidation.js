@@ -8,7 +8,7 @@ import { revalidatePath } from 'next/cache'
  * @param {string} validateString - check for this string in the url and invalidate
  */
 export const checkRevalidation = (slug, validateString='revalidate') => {
-    if(slug.includes(validateString)){
+    if(slug?.includes(validateString)){
       const tmpSlug = slug.filter(str => str !== validateString)
       revalidatePath('/', 'layout')
       redirect(`/${tmpSlug.toString().replaceAll(',','/')}`)

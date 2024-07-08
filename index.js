@@ -7,5 +7,5 @@ export {
     getContent, 
     composeContent,
     getGlobals,
-    getPages,
+    getPages
 };

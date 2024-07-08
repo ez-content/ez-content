@@ -3,16 +3,25 @@
 This is the changelog for [ez-content](https://github.com/ez-content/ez-content), 
 a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
+## 2024-07-07
+
+> v1.0.31-32 via @jafstar
+
+- Fix EZParagraph bug
+- Add revalidationTags to fetch query
+
 ## 2024-07-05
 
-> v1.0.17 via @jafstar
+> v1.0.17-30 via @jafstar
 
 - Add EZ_CACHE env var for revalidate options "force-cache" | "no-store"
-- Add beta test of EZTitle component
+- Add EZ_FRESH for revalidate timeout, defaults to 3600/1hr
+- Add test of Base components EZTitle, EZParagraph, EZImage 
+- Add ez-content/EZHTML for general template use, allows for paragraph break tags
 
 ## 2024-05-11
 
-> v1.0.10, 11, 12, 13, 14, 15, 16 via @jafstar
+> v1.0.10-16 via @jafstar
 
 - Update API URL
 - Add ViewContent, again
@@ -30,7 +39,7 @@ a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
 ## 2024-05-05 
 
-> v1.0.6,7,8 via @jafstar
+> v1.0.6-8 via @jafstar
 
 - Wow it seems ViewContent does not play well importing dynamic components from the node_modules folder. Perhaps a system permission issue, need more research.
 

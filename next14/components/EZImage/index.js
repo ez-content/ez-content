@@ -2,7 +2,7 @@ import React from 'react'
 
 const e = React.createElement;
 
-export default class EZTitle extends React.Component {
+export default class EZParagraph extends React.Component {
     constructor(props){
         super(props)
     }
@@ -10,12 +10,14 @@ export default class EZTitle extends React.Component {
         const content = this.props.content
 
       return e(
-       content?.element ?? 'h2',
-        { className: content?.className ?? 'ez-title' },
-       content?.text ?? ''
+        content?.element ?? 'img',
+        { 
+            className: content?.className ?? 'ez-image',
+            src: content?.image 
+
+        }
       );
     }
-
 
 
   }

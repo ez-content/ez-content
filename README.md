@@ -12,7 +12,27 @@ This package is to retrieve data from [ezcontent.io](ezcontent.io) and display R
 
 ## .env File
 
-``` EZ_TOKEN="your_token_goes_here" ```
+``` 
+EZ_TOKEN="your_token_goes_here" 
+EZ_CACHE="force-cache | no-store"
+EZ_FRESH=3600
+EZ_API="https://api.ezcontent.io"
+```
+
+## EZHTML
+
+Added convenience utility component to render HTML content with React's dangerouslySetInnerHTML 
+
+> import EZHTML from 'ez-content/EZHTML'
+
+```
+<EZHTML 
+  el="p"  
+  text={content.body}  
+  className="cool-class__name-1" 
+  default="Lorem ipsum dolor <br /> sit amet exerciphaedrum."
+/> 
+```
 
 
 ## Example 1 - Standard Use

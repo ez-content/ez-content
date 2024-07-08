@@ -1,6 +1,6 @@
 {
   "name": "ez-content",
-  "version": "1.0.17",
+  "version": "1.0.32",
   "description": "Utilities for EZ Content",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,8 @@
     "url": "https://github.com/ez-content/ez-content"
   },
   "author": "EZ Content Inc",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "18.2.0"
+  }
 }

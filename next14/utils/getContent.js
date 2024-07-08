@@ -55,6 +55,7 @@ try {
     signal: signal,
     cache: isPreview ? "no-store" : options.cache,
     referrer: options.referrer,
+    next: { tags: [`pages/${getSlug}`]}
   });
 
   const data = await res.json();

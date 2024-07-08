@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+// import EZTitle from "../components/EZTitle";
+// import StringToReactComponent from 'string-to-react-component';
 
 export const composeContent = ( content, globals, isPreview ) => {
     let _CONTENT;
@@ -8,8 +10,23 @@ export const composeContent = ( content, globals, isPreview ) => {
     } else {
       _CONTENT = content;
     }
+
+    const EZ_COMPONENTS = [
+      "EZTitle",
+      "EZParagraph",
+      "EZImage",
+    ]
   
     const compList = _CONTENT.map((itm) => {
+      if(EZ_COMPONENTS.includes(itm.comp_type)){
+       return(dynamic(() =>
+          import(`../components/${itm.comp_type}`, { ssr: !isPreview })
+        ))
+
+ 
+      } else {
+
+    
       if (!itm.comp_global) {
         const tmpPath = itm.comp_path ? `${itm.comp_path}` : `/${itm.comp_type}`;
         return dynamic(() =>
@@ -31,6 +48,8 @@ export const composeContent = ( content, globals, isPreview ) => {
           );
         });
       }
+
+    }
     });
   
     const contentList = _CONTENT.map((itm) => {

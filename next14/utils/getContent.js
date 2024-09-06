@@ -8,6 +8,10 @@ import { checkRevalidation } from "./checkRevalidation";
  * @returns
  */
 export async function getContent(slug, opts) {
+
+  // DEBUG
+  // console.log("slug: ", slug)
+  
 const options = {
   ...defOpts,
   ...opts,
@@ -53,7 +57,9 @@ if (Array.isArray(getSlug)) {
   }
 }
 
-const URL = `${API_BASE}/pages/${getSlug}`;
+const slugType =  "content"
+
+const URL = `${API_BASE}/${slugType}/${getSlug}`;
 try {
   const res = await fetch(URL, {
     signal: signal,
@@ -62,7 +68,14 @@ try {
     // next: { tags: [`pages/${getSlug}`]}
   });
 
+
+
   const data = await res.json();
+
+  // DEBUG
+  // console.log("res: ", res)
+  // console.log("data: ", data)
+
 
   const URL2 = `${API_BASE}/globals`;
   const res2 = await fetch(URL2, {
@@ -78,7 +91,7 @@ try {
     data2,
     isPreview,
     title: data[0]?.page_title,
-    content: data[0]?.page_content,
+    content: data,
     globals: data2,
   };
 } catch (err) {

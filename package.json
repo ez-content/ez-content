@@ -1,6 +1,6 @@
 {
   "name": "ez-content",
-  "version": "1.0.34",
+  "version": "1.0.38",
   "description": "Utilities for EZ Content",
   "main": "index.js",
   "scripts": {

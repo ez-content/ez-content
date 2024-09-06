@@ -3,6 +3,15 @@
 This is the changelog for [ez-content](https://github.com/ez-content/ez-content), 
 a javascript package created for [ezcontent.io](https://www.ezcontent.io/)
 
+## 2024-08-28
+
+> v1.0.35-38 via @jafstar
+
+- Update getContent with variable param and server
+- Add getPageOnly in place of getPages
+- Move getContent into getPages
+
+
 ## 2024-07-07
 
 > v1.0.31-34 via @jafstar

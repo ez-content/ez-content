@@ -4,4 +4,5 @@ export const defOpts = {
     hash: process.env.EZ_HASH ??'revalidate',
     referrer: process.env.EZ_TOKEN ?? "",
     api_url: process.env.EZ_API ?? `https://api.ezcontent.io`,
+    preview_origin: process.env.NEXT_PUBLIC_EZ_EDITOR_ORIGIN ?? "https://my.ezcontent.io",
   };

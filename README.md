@@ -73,7 +73,7 @@ import { composeContent, ViewContent } from "ez-content";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 
-export default function SlugPage({ content, globals, isPreview }) {
+export default function ViewPage({ content, globals, isPreview }) {
   const { compListAll, contentListAll } = composeContent(
     content,
     globals,

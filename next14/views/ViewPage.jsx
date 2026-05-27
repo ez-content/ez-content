@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { composeContent } from "../utils/composeContent";
 import { defOpts } from "../../constants/defOpts";
 
-export default function SlugPage({
+export default function ViewPage({
   content,
   globals,
   isPreview,
